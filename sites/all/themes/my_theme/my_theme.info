@@ -1,0 +1,16 @@
+name = first_theme
+description = Custom theme for mydrupal
+core = 6.x
+engine = phptemplate
+
+regions[right] = Right sidebar
+regions[content] = Content
+regions[footer] = Footer
+
+
+stylesheets[all][] = css/basestyle.css
+stylesheets[print][] = css/print.css
+scripts[] = ../../../all/libraries/colorbox/colorbox/jquery.colorbox-min.js
+scripts[] = colorbox.js
+
+features=[]
