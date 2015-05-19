@@ -68,5 +68,17 @@ function my_module_my_form_validate($form, &$form_state) {
  * form successfully processes
  */
 function my_module_my_form_submit($form, &$form_state) {
+		
+	$edit = array(
+          'name' => $form_state['values']['first']
+          );
+	if(user_save(drupal_anonymous_user(), $edit))
+	{
     drupal_set_message(t('The form has been submitted.'));
+	}
+	else
+	{
+		drupal_set_message(t('Error while saving the data.'));
+	}
 }
+
